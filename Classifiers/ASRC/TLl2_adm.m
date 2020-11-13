@@ -46,7 +46,7 @@ diagXtX = diag(diag(XtX)) ;
 XtY = X_Trn'*X_Tst ;
 for i = 1 : num_Tst
     y = X_Tst(:,i) ;
-    
+    %      min 1/2 * ||y-Xw||_2^2 + lambda * ||X*Diag(w)||_{\ast}
     %% Initializing optimization variables
     mu = 1e-2 ;% tuning parameter
     w = zeros(num_Trn,1) ;
